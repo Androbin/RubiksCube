@@ -23,12 +23,12 @@ public final class Layer3
 		final Color[] brick_c = new Color[]
 		{ DOWN, SIDES[ 0 ] };
 		
-		Color[] pos_c = cube.searchBrick( brick_c );
+		Color[] posC = cube.searchBrick( brick_c );
 		
-		while ( pos_c[ 1 ] != SIDES[ 0 ] )
+		while ( posC[ 1 ] != SIDES[ 0 ] )
 		{
 			cube.rotate( DOWN, 1 );
-			pos_c = cube.searchBrick( brick_c );
+			posC = cube.searchBrick( brick_c );
 		}
 	}
 	

@@ -1,8 +1,8 @@
 package de.fridolin.jf.cube.representation;
 
 /**
- * oben: weiß
- * vorne: grün
+ * oben: weiÃŸ
+ * vorne: grÃ¼n
  * rechts: rot
  * hinten: blau
  * links: orange
@@ -10,51 +10,53 @@ package de.fridolin.jf.cube.representation;
  * 
  * @author Simon
  */
-public interface Cube
-{
-	/**
-	 * dreht die würfelseite mit der farbe c (der mittlere stein) um 90° * drehung im Uhrzeigersinn
-	 * 
-	 * @param ausgabe
-	 *        gibt an, ob sich ein Fenster mit der neuen Situation öffnen soll
-	 * @param c
-	 * @param drehung
-	 */
-	void rotate( final Color c, final int drehung );
-	
-	/**
-	 * Gibt den Stein zurück, der die Flächen mit den Farben farbe1, farbe2 und farbe3 an einer Ecke verbindet
-	 * Falls der Brick oben oder unten ist, wird die Farbe dieser Seite zuerst
-	 * ausgegeben, ansonsten einfach im Uhrzeigersinn: grün, rot, blau, orange
-	 * Bsp: [weiss, rot, blau]
-	 *
-	 * @param farbe1
-	 * @param farbe2
-	 * @param farbe3
-	 * @return
-	 */
-	Color[] getBrickAtEdge( final Color farbe1, final Color farbe2, final Color farbe3 );
-	
-	/**
-	 * Gibt den Stein zurück, der die Flächen mit den Farben farbe1 und farbe2 an einer Ecke verbindet
-	 * Falls der Brick oben oder unten ist, wird die Farbe dieser Seite zuerst
-	 * ausgegeben, ansonsten einfach im Uhrzeigersinn: grün, rot, blau, orange
-	 * Bsp: [weiss, rot, blau]
-	 * 
-	 * @param farbe1
-	 * @param farbe2
-	 * @return
-	 */
-	Color[] getBrickAtBorder( final Color farbe1, final Color farbe2 );
-	
-	/**
-	 * Gibt die Farben der Flächen zurück, die durch den Stein mit den Farben farben verbunden werden:
-	 * Falls farben drei Elemente enthält, ist der Stein ein Eckstein und der Rückgabewert hat ebenfalls drei Werte
-	 * Falls farben zwei Elemente enthält, ist der Stein ein Kantenstein und der Rückgabewert hat ebenfalls zwei Werte
-	 * Die Farben werden in dieser Reihenfolge zurückgegeben: weiß, gelb, grün, rot, blau, orange
-	 * 
-	 * @param farben
-	 * @return
-	 */
-	Color[] searchBrick( final Color[] farben );
+public interface Cube {
+  /**
+   * dreht die wÃ¼rfelseite mit der farbe c (der mittlere stein) um 90Â° * drehung im Uhrzeigersinn
+   * 
+   * @param ausgabe
+   *        gibt an, ob sich ein Fenster mit der neuen Situation Ã¶ffnen soll
+   * @param c
+   * @param drehung
+   */
+  void rotate( final Color c, final int drehung );
+  
+  /**
+   * Gibt den Stein zurÃ¼ck, der die FlÃ¤chen mit den Farben farbe1, farbe2 und farbe3 an einer Ecke
+   * verbindet
+   * Falls der Brick oben oder unten ist, wird die Farbe dieser Seite zuerst
+   * ausgegeben, ansonsten einfach im Uhrzeigersinn: grÃ¼n, rot, blau, orange
+   * Bsp: [weiss, rot, blau]
+   *
+   * @param farbe1
+   * @param farbe2
+   * @param farbe3
+   * @return
+   */
+  Color[] getBrickAtEdge( final Color farbe1, final Color farbe2, final Color farbe3 );
+  
+  /**
+   * Gibt den Stein zurÃ¼ck, der die FlÃ¤chen mit den Farben farbe1 und farbe2 an einer Ecke verbindet
+   * Falls der Brick oben oder unten ist, wird die Farbe dieser Seite zuerst
+   * ausgegeben, ansonsten einfach im Uhrzeigersinn: grÃ¼n, rot, blau, orange
+   * Bsp: [weiss, rot, blau]
+   * 
+   * @param farbe1
+   * @param farbe2
+   * @return
+   */
+  Color[] getBrickAtBorder( final Color farbe1, final Color farbe2 );
+  
+  /**
+   * Gibt die Farben der FlÃ¤chen zurÃ¼ck, die durch den Stein mit den Farben farben verbunden werden:
+   * Falls farben drei Elemente enthÃ¤lt, ist der Stein ein Eckstein und der RÃ¼ckgabewert hat
+   * ebenfalls drei Werte
+   * Falls farben zwei Elemente enthÃ¤lt, ist der Stein ein Kantenstein und der RÃ¼ckgabewert hat
+   * ebenfalls zwei Werte
+   * Die Farben werden in dieser Reihenfolge zurÃ¼ckgegeben: weiÃŸ, gelb, grÃ¼n, rot, blau, orange
+   * 
+   * @param farben
+   * @return
+   */
+  Color[] searchBrick( final Color[] farben );
 }
