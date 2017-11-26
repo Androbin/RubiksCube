@@ -38,25 +38,25 @@ public final class Zauberwuerfel implements Cube {
     }
     
     switch ( c ) {
-      case white :
+      case white:
         this.rotateY( drehung, 1 );
         break;
-      case yellow :
+      case yellow:
         this.rotateY( drehung, -1 );
         break;
-      case green :
+      case green:
         this.rotateZ( drehung, -1 );
         break;
-      case blue :
+      case blue:
         this.rotateZ( drehung, 1 );
         break;
-      case red :
+      case red:
         this.rotateX( drehung, -1 );
         break;
-      case orange :
+      case orange:
         this.rotateX( drehung, 1 );
         break;
-      case none :
+      case none:
         break;
     }
   }

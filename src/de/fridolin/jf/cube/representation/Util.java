@@ -123,13 +123,13 @@ public final class Util {
    */
   public static Color getYColor( final int y ) {
     switch ( y ) {
-      case -1 :
+      case -1:
         return yellow;
-      case 0 :
+      case 0:
         return none;
-      case 1 :
+      case 1:
         return white;
-      default :
+      default:
         throw new IllegalArgumentException();
     }
   }

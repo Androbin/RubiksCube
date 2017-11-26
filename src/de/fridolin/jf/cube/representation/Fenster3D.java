@@ -143,18 +143,18 @@ public final class Fenster3D extends JFrame {
   
   public void keyReleased( final KeyEvent e ) {
     switch ( e.getKeyCode() ) {
-      default :
+      default:
         this.wuerfel.rotate( Color.get( e.getKeyCode() ), e.isShiftDown() ? -1 : 1 );
         break;
-      case KeyEvent.VK_ESCAPE :
+      case KeyEvent.VK_ESCAPE:
         System.exit( 0 );
-      case KeyEvent.VK_S :
+      case KeyEvent.VK_S:
         shuffle( this.wuerfel, ThreadLocalRandom.current() );
         break;
-      case KeyEvent.VK_L :
+      case KeyEvent.VK_L:
         Algorithmus.solve( this.wuerfel );
         break;
-      case KeyEvent.VK_ENTER :
+      case KeyEvent.VK_ENTER:
         if ( SCHRITT_FUER_SCHRITT ) {
           this.naechsteDrehung();
         }
