@@ -4,8 +4,9 @@ import static de.fridolin.jf.cube.representation.Color.*;
 import java.util.*;
 
 public final class Util {
-  public static final Color[] SIDES = new Color[] { green, red, blue,
-      orange, white, yellow };
+  public static final Color[] SIDES = {
+      green, red, blue, orange, white, yellow };
+  public static final int[] TURNS = { -1, 1, 2 };
   
   private Util() {
   }
@@ -157,7 +158,9 @@ public final class Util {
   
   public static void shuffle( final Cube cube, final Random random ) {
     for ( int i = 0; i < 20; i++ ) {
-      cube.rotate( SIDES[ random.nextInt( SIDES.length ) ], random.nextInt( 3 ) + 1 );
+      final Color side = SIDES[ random.nextInt( SIDES.length ) ];
+      final int turn = TURNS[ random.nextInt( TURNS.length ) ];
+      cube.rotate( side, turn );
     }
   }
 }
